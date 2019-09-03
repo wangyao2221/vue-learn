@@ -16,6 +16,14 @@
   </ol>
 
   <my-component propA="abc" propF="aa"></my-component>
+
+  <p>{{ total }}</p>
+  <button-counter v-on:increment="incrementTotal"></button-counter>
+  <button-counter v-on:increment="incrementTotal"></button-counter>
+
+  <button-counter2></button-counter2>
+  <button-counter2></button-counter2>
+  <button-counter2></button-counter2>
   <hr>
   </div>
 </template>
@@ -30,7 +38,13 @@ export default {
         {text: 'Runoob'},
         {text: 'Google'},
         {text: 'Taobao'}
-      ]
+      ],
+      total: 0
+    }
+  },
+  methods: {
+    incrementTotal: function () {
+      this.total += 1
     }
   },
   components: {
@@ -70,6 +84,33 @@ export default {
           }
         }
       }
+    },
+    'button-counter': {
+      template: '<button v-on:click="incrementHandler">{{ counter }}</button>',
+      data () {
+        return {
+          counter: 0
+        }
+      },
+      methods: {
+        incrementHandler: function () {
+          this.counter += 1
+          this.$emit('increment')
+        }
+      }
+    },
+    'button-counter2': {
+      data: function () {
+        // data 选项是一个函数，组件不相互影响
+        return {
+          count: 0
+        }
+      },
+      // data: function () {
+      //   // data 选项是一个对象，会影响到其他实例
+      //   return buttonCounter2Data
+      // },
+      template: '<button v-on:click="count++">点击了 {{ count }} 次。</button>'
     }
   }
 }
