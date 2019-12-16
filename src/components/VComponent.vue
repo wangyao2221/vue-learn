@@ -25,6 +25,9 @@
   <button-counter2></button-counter2>
   <button-counter2></button-counter2>
   <hr>
+    <el-table :data="sites">
+      <el-table-column prop="text" label="text"></el-table-column>
+    </el-table>
   </div>
 </template>
 

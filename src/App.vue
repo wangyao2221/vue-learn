@@ -1,17 +1,19 @@
 <template>
-  <div id="app">
+<!--  <div id="app">-->
 <!--    <img src="./assets/logo.png">-->
 <!--    <helloWorld></helloWorld>-->
-    <templateSyntax></templateSyntax>
-    <ifAndLoop></ifAndLoop>
-    <loopStatement></loopStatement>
-    <computed></computed>
-    <watch></watch>
-    <styleBind></styleBind>
-    <eventHandler></eventHandler>
-    <formComponent></formComponent>
+<!--    <templateSyntax></templateSyntax>-->
+<!--    <ifAndLoop></ifAndLoop>-->
+<!--    <loopStatement></loopStatement>-->
+<!--    <computed></computed>-->
+<!--    <watch></watch>-->
+<!--    <styleBind></styleBind>-->
+<!--    <eventHandler></eventHandler>-->
+<!--    <formComponent></formComponent>-->
     <vComponent></vComponent>
-  </div>
+<!--  <SearchComponentTest></SearchComponentTest>-->
+<!--  </div>-->
+<!--  <FilterTableComponent></FilterTableComponent>-->
 </template>
 
 <script>
@@ -26,6 +28,8 @@ import StyleBind from './components/StyleBind'
 import EventHandler from './components/EventHandler'
 import FormComponent from './components/FormComponent'
 import VComponent from './components/VComponent'
+import SearchComponentTest from './components/SearchComponentTest'
+// import FilterTableComponent from './components/FilterTableComponent'
 
 export default {
   name: 'App',
@@ -39,7 +43,8 @@ export default {
     StyleBind,
     EventHandler,
     FormComponent,
-    VComponent
+    VComponent,
+    SearchComponentTest
   }
 }
 </script>
